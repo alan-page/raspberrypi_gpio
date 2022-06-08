@@ -9,7 +9,7 @@ GPIO.setup(3,GPIO.OUT)
 GPIO.setup(4,GPIO.OUT)
 
 # Fraction or multiple of seconds for each ON state in the loop (1 = 10 seconds of red light)
-timefactor = 0.5
+timefactor = 1
 
 while True:
     print "Red"
