@@ -1,4 +1,6 @@
-# sudo python traffic_signal.py
+# python traffic_signal.py
+
+# Traffic signal simulator
 
 import RPi.GPIO as GPIO
 import time
