@@ -14,7 +14,6 @@ GPIO.setup(4,GPIO.OUT)
 timefactor = 1
 
 try:
-
     while True:
         print "Red"
         GPIO.output(2,GPIO.HIGH)
@@ -31,7 +30,7 @@ try:
         print "Yellow"
         GPIO.output(4,GPIO.LOW)
         GPIO.output(3,GPIO.HIGH)
-        durationY = timefactor * 4    
+        durationY = timefactor * 4
         time.sleep(durationY)
 
 except KeyboardInterrupt:
