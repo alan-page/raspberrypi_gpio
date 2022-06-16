@@ -36,6 +36,9 @@ try:
 except KeyboardInterrupt:
     # Special Ctrl-C code
     print "...Ctrl-C..."
+    GPIO.output(2,GPIO.LOW)
+    GPIO.output(3,GPIO.LOW)
+    GPIO.output(4,GPIO.LOW)
 
 except:
     # Other interrupts (errors maybe?)
