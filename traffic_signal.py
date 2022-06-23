@@ -42,7 +42,7 @@ except KeyboardInterrupt:
 
 except:
     # Other interrupts (errors maybe?)
-    print "Interrupted! "
+    print "Non Ctrl-C interruption! "
 
 finally:
     # Turn off the lights
