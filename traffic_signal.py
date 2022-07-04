@@ -51,6 +51,7 @@ except KeyboardInterrupt:
 
 except:
     # Other interrupts (errors maybe?)
+    # How to trigger this?
     print "Non Ctrl-C interruption! "
 
 finally:
