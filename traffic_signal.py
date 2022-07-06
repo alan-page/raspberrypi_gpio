@@ -44,6 +44,7 @@ try:
 
 except KeyboardInterrupt:
     # Special Ctrl-C code
+    # This code works and displays the message properly
     print "...Ctrl-C..."
     GPIO.output(red,GPIO.LOW)
     GPIO.output(yellow,GPIO.LOW)
