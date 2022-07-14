@@ -5,6 +5,8 @@
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
+
+# Don't suppress any warnings
 #GPIO.setwarnings(False)
 
 # Red
