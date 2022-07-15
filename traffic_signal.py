@@ -6,7 +6,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 
-# Don't suppress any warnings
+# Don't suppress any warnings. Yes, it's a double negative...
 #GPIO.setwarnings(False)
 
 # Red
