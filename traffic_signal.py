@@ -3,7 +3,16 @@
 # Traffic signal simulator
 
 import RPi.GPIO as GPIO
+print "Imported RPi.GPIO"
+
+# For sleep
 import time
+print "Imported time"
+
+# For getting hours and minutes
+from datetime import datetime
+print "Imported datetime"
+
 GPIO.setmode(GPIO.BCM)
 
 # Don't suppress any warnings. Yes, it's a double negative...
@@ -26,23 +35,39 @@ timefactor = 1
 
 try:
     while True:
-        print "Red"
-        GPIO.output(yellow,GPIO.LOW)
-        GPIO.output(red,GPIO.HIGH)
-        durationR = timefactor * 10
-        time.sleep(durationR)
+#        print "About to get the datetime"
+        d = datetime.utcnow()
+#        print d
+# Eastern time = UTC - 4 (this time of year)
+        et = d.hour - 4
+        if et < 6:
+            GPIO.output(green,GPIO.LOW)
+            GPIO.output(red,GPIO.LOW)
+            GPIO.output(yellow,GPIO.LOW)
 
-        print "Green"
-        GPIO.output(red,GPIO.LOW)
-        GPIO.output(green,GPIO.HIGH)
-        durationG = timefactor * 10
-        time.sleep(durationG)
+            GPIO.output(yellow,GPIO.HIGH)
+            time.sleep(.7)
+            GPIO.output(yellow,GPIO.LOW)
+            time.sleep(.7)
 
-        print "Yellow"
-        GPIO.output(green,GPIO.LOW)
-        GPIO.output(yellow,GPIO.HIGH)
-        durationY = timefactor * 4
-        time.sleep(durationY)
+        else:
+            print "Red"
+            GPIO.output(yellow,GPIO.LOW)
+            GPIO.output(red,GPIO.HIGH)
+            durationR = timefactor * 10
+            time.sleep(durationR)
+
+            print "Green"
+            GPIO.output(red,GPIO.LOW)
+            GPIO.output(green,GPIO.HIGH)
+            durationG = timefactor * 10
+            time.sleep(durationG)
+
+            print "Yellow"
+            GPIO.output(green,GPIO.LOW)
+            GPIO.output(yellow,GPIO.HIGH)
+            durationY = timefactor * 4
+            time.sleep(durationY)
 
 except KeyboardInterrupt:
     # Special Ctrl-C code
