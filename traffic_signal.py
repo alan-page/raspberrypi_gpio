@@ -35,12 +35,11 @@ timefactor = 1
 
 try:
     while True:
+        # Flash the yellow lights late at night
 #        print "About to get the datetime"
-        d = datetime.utcnow()
+        d = datetime.now()
 #        print d
-# Eastern time = UTC - 4 (this time of year)
-        et = d.hour - 4
-        if et < 6:
+        if d.hour < 6 or d.hour > 21:
             GPIO.output(green,GPIO.LOW)
             GPIO.output(red,GPIO.LOW)
             GPIO.output(yellow,GPIO.LOW)
