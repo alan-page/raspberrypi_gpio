@@ -44,6 +44,7 @@ try:
             GPIO.output(red,GPIO.LOW)
             GPIO.output(yellow,GPIO.LOW)
 
+            time.sleep(.7)
             GPIO.output(yellow,GPIO.HIGH)
             time.sleep(.7)
             GPIO.output(yellow,GPIO.LOW)
