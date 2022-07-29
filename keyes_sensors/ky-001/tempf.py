@@ -70,7 +70,7 @@ def TemperaturAuswertung():
 # is a pause, the length of which can be set with the "sleeptime" variable
 try:
     while True:
-        print ("---------------------------------------")
+        print ("---------------------------------")
         print ("Temperature:", TemperaturAuswertung(), "°F")
         time.sleep(sleeptime)
  
