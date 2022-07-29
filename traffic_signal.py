@@ -18,17 +18,17 @@ GPIO.setmode(GPIO.BCM)
 # Don't suppress any warnings. Yes, it's a double negative...
 #GPIO.setwarnings(False)
 
-# Red
-GPIO.setup(2,GPIO.OUT)
+# Red on pin 2
 red = 2
+GPIO.setup(red, GPIO.OUT)
 
-# Yellow
-GPIO.setup(3,GPIO.OUT)
+# Yellow on pin 3
 yellow = 3
+GPIO.setup(yellow, GPIO.OUT)
 
-# Green
-GPIO.setup(4,GPIO.OUT)
+# Green on pin 4
 green = 4
+GPIO.setup(green, GPIO.OUT)
 
 # Fraction or multiple of seconds for each ON state in the loop (1 = 10 seconds of red light)
 timefactor = 1
