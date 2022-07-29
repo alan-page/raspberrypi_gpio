@@ -1,3 +1,6 @@
+# Python 3 only!!
+
+
 # From https://sensorkit.joy-it.net/en/sensors/ky-001
 # For this to work, set up the one wire configuration. 
 # The file "/boot/config.txt" must be edited
