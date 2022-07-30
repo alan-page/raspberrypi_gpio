@@ -1,12 +1,14 @@
 # Python 3 only!!
 
-
+# Notes
 # From https://sensorkit.joy-it.net/en/sensors/ky-001
 # For this to work, set up the one wire configuration. 
 # The file "/boot/config.txt" must be edited
 # Add the following to the end of the file:
 #   dtoverlay=w1-gpio,gpiopin=17
 # Then reboot the pi
+
+# Strangely, when using parasitic power, the temp is always 185 F...
 
 # coding=utf-8
 # Required modules are imported and set up
@@ -16,7 +18,7 @@ from time import sleep
 import RPi.GPIO as GPIO
  
 # At this point the pause between the individual measurements can be set
-sleeptime = 60
+sleeptime = 6
  
 # The One-Wire input pin is declared and the integrated PullUp resistor is activated
 GPIO.setmode(GPIO.BCM)
