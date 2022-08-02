@@ -65,7 +65,8 @@ def TemperaturAuswertung():
 
         # Fahrenheit: Double it and add 30?
         temp_f = ((temp_c * 9) / 5) + 32
-        return temp_f
+        temp_f_format = "{:.1f}".format(temp_f)
+        return temp_f_format
 
 # Main program loop
 # The measured temperature is output to the console - between the individual measurements
