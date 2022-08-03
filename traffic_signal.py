@@ -46,8 +46,10 @@ try:
 
             time.sleep(.7)
             GPIO.output(yellow,GPIO.HIGH)
+            print "Yellow"
             time.sleep(.7)
             GPIO.output(yellow,GPIO.LOW)
+            print "Off"
             time.sleep(.7)
 
         else:
