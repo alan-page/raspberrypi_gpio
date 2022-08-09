@@ -14,11 +14,12 @@
 # Required modules are imported and set up
 import glob
 import time
+import datetime
 from time import sleep
 import RPi.GPIO as GPIO
  
-# At this point the pause between the individual measurements can be set
-sleeptime = 6
+# At this point the pause (in seconds) between the individual measurements can be set
+sleeptime = 60
  
 # The One-Wire input pin is declared and the integrated PullUp resistor is activated
 GPIO.setmode(GPIO.BCM)
@@ -73,8 +74,8 @@ def TemperaturAuswertung():
 # is a pause, the length of which can be set with the "sleeptime" variable
 try:
     while True:
-        print ("---------------------------------")
-        print ("Temperature:", TemperaturAuswertung(), "°F")
+        print ("---------------------------------------------------")
+        print (datetime.datetime.now(), " Temperature:", TemperaturAuswertung(), "°F")
         time.sleep(sleeptime)
  
 except KeyboardInterrupt:
