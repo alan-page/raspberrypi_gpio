@@ -33,6 +33,10 @@ GPIO.setup(green, GPIO.OUT)
 # Fraction or multiple of seconds for each ON state in the loop (1 = 10 seconds of red light)
 timefactor = 1
 
+# Flashing state times
+on_time = 0.7
+off_time = 0.3
+
 try:
     while True:
         # Flash the yellow lights late at night
@@ -44,10 +48,10 @@ try:
             GPIO.output(red,GPIO.LOW)
             GPIO.output(yellow,GPIO.LOW)
 
-            time.sleep(.7)
+            time.sleep(off_time)
             GPIO.output(yellow,GPIO.HIGH)
             print "Yellow"
-            time.sleep(.7)
+            time.sleep(on_time)
             GPIO.output(yellow,GPIO.LOW)
             print "Off"
             time.sleep(.7)
