@@ -74,10 +74,15 @@ def TemperaturAuswertung():
 # is a pause, the length of which can be set with the "sleeptime" variable
 try:
     while True:
+        temp_value = TemperaturAuswertung()
+
+        print (datetime.datetime.now())
+        print ("Temperature:", temp_value, "°F")
         print ("0         10        20        30         40       50       60        70        80        90        100")
         print ("-------------------------------------------------------   <-- Not real, yet")
-        print (datetime.datetime.now(), " Temperature:", TemperaturAuswertung(), "°F")
+        print ("")
+        print ("")
         time.sleep(sleeptime)
- 
+
 except KeyboardInterrupt:
     GPIO.cleanup
