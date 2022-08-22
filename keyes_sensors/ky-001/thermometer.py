@@ -75,11 +75,16 @@ def TemperaturAuswertung():
 try:
     while True:
         temp_value = TemperaturAuswertung()
+        temp_bar_string = ""
+        for t in range(0, 55):
+            temp_bar_string += "="
+
+        temp_bar_string += "   <-- this is still fake..."
 
         print (datetime.datetime.now())
         print ("Temperature:", temp_value, "°F")
         print ("0         10        20        30         40       50       60        70        80        90        100")
-        print ("-------------------------------------------------------   <-- Not real, yet")
+        print (temp_bar_string)
         print ("")
         print ("")
         time.sleep(sleeptime)
