@@ -75,11 +75,11 @@ def TemperaturAuswertung():
 try:
     while True:
         temp_value = TemperaturAuswertung()
+        # Cast string of "xx.y" value to a float, then an integer
+        temp_value_int = int(float(temp_value))
         temp_bar_string = ""
-        for t in range(0, 55):
+        for t in range(0, temp_value_int):
             temp_bar_string += "="
-
-        temp_bar_string += "   <-- this is still fake..."
 
         print (datetime.datetime.now())
         print ("Temperature:", temp_value, "°F")
