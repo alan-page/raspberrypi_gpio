@@ -75,7 +75,7 @@ def TemperaturAuswertung():
 try:
     while True:
         temp_value = TemperaturAuswertung()
-        # Cast string of "xx.y" value to a float, then an integer (and then add 1)
+        # Cast string of "xx.y" value to a float, then an integer (and add 1 to align the bar end)
         temp_value_int = int(float(temp_value)) + 1
         temp_bar_string = ""
         for t in range(0, temp_value_int):
