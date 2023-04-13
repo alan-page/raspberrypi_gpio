@@ -85,8 +85,7 @@ try:
         print ("Indoor Temperature:", temp_value, "°F")
         print ("0    +    10   +    20   +    30   +    40   +    50   +    60   +    70   +    80   +    90   +    100 F")
         print (temp_bar_string)
-        print ("")
-        print ("")
+
         time.sleep(sleeptime)
 
 except KeyboardInterrupt:
